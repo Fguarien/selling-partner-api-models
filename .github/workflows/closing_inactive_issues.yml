@@ -6,6 +6,11 @@ on:
     # Controls when the action will run: Minute (0-59) | Hour (0-23) | Day of the month (1-31) | Month (1-12 or JAN-DEC) | Day of the week (0-6 or SUN-SAT)
     - cron: "30 18 * * *"
 
+# Moindre privilège pour GITHUB_TOKEN (OpenSSF Scorecard Token-Permissions).
+# stale-issue-cleanup étiquette et ferme des issues : issues: write seul, aucun droit sur le code
+permissions:
+  issues: write
+
 jobs:
   cleanup:
     name: Stale issue job
